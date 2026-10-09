@@ -20,7 +20,7 @@
     --accent: #294164;
     /* backgrounds */
     --bg-primary: #ffff;
-    --bg-secondary: #FBFBFA;
+    --bg-secondary: #fbf7ed;
     /* lines */
     --line: rgba(17, 31, 52, .16);
 }
@@ -39,10 +39,22 @@ body {
     grid-template-rows: auto 1fr auto;
 }
 
-h1, h2, h3, h4 {
+h1,
+h2,
+h3,
+h4 {
     font-family: var(--font-jakarta);
 }
 
+@media (max-width: 767px) {
+    ::-webkit-scrollbar {
+        display: none;
+    }
+
+    html {
+        scrollbar-width: none;
+    }
+}
 
 ::-webkit-scrollbar {
     width: 8px;
