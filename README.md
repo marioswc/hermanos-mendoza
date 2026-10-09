@@ -1,46 +1,105 @@
-# Astro Starter Kit: Basics
+<div align="center">
 
-```sh
-npm create astro@latest -- --template basics
-```
+# Hermanos Mendoza
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Website for a custom carpentry and painting workshop
 
-## 🚀 Project Structure
+A modern, responsive landing page designed to present the services, projects, and contact channels of **Carpintería y Pintura Hermanos Mendoza**.
 
-Inside of your Astro project, you'll see the following folders and files:
+</div>
+
+---
+
+## About the project
+
+This project turns the digital presence of a local workshop into a clear and trustworthy experience for potential customers. The website explains the work process, presents finished projects, answers common questions, and makes it easy to request a quote.
+
+The interface was designed to help users:
+
+- Quickly understand the workshop's services.
+- Explore previous work and learn about its value.
+- Find answers to common questions without leaving the page.
+- Request a quote through WhatsApp or make a phone call.
+
+## Key features
+
+- Responsive design for mobile, tablet, and desktop.
+- Mobile navigation with an accessible menu that can be closed with `Escape`.
+- Dedicated sections for services, projects, frequently asked questions, and contact.
+- Clear calls to action focused on quote requests.
+- Content separated from the presentation layer through JSON files.
+- Reusable Astro components for buttons, the header, and the footer.
+- A consistent visual system and typography using Tailwind CSS.
+- External links configured with secure practices (`noopener noreferrer`).
+
+## Tech stack
+
+| Technology                               | Purpose                                      |
+| ---------------------------------------- | -------------------------------------------- |
+| [Astro](https://astro.build/)            | Main framework and interface generation      |
+| [Tailwind CSS](https://tailwindcss.com/) | Responsive styles and utility classes        |
+| TypeScript                               | Type safety and strict project configuration |
+| JSON                                     | Project, benefits, and FAQ content           |
+| Vercel                                   | Demo deployment                              |
+
+## Project structure
 
 ```text
-/
-├── public/
-│   └── favicon.svg
-├── src
-│   ├── assets
-│   │   └── astro.svg
-│   ├── components
-│   │   └── Welcome.astro
-│   ├── layouts
-│   │   └── Layout.astro
-│   └── pages
-│       └── index.astro
-└── package.json
+.
+├── public/                 # Favicon and public files
+├── src/
+│   ├── assets/             # Logo and visual assets
+│   ├── components/
+│   │   ├── ui/             # Reusable buttons
+│   │   ├── Footer.astro
+│   │   ├── Header.astro
+│   │   └── Main.astro
+│   ├── data/               # Editable page content
+│   │   ├── cards.json
+│   │   ├── faqs.json
+│   │   └── projects.json
+│   ├── layouts/
+│   │   └── Layout.astro
+│   ├── pages/
+│   │   └── index.astro
+│   └── styles/
+│       └── global.css
+├── astro.config.mjs
+├── package.json
+└── tsconfig.json
 ```
 
-To learn more about the folder structure of an Astro project, refer to [our guide on project structure](https://docs.astro.build/en/basics/project-structure/).
+## Run the project locally
 
-## 🧞 Commands
+### Requirements
 
-All commands are run from the root of the project, from a terminal:
+- Node.js `22.12.0` or higher.
+- npm.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+### Installation
 
-## 👀 Want to learn more?
+```bash
+git clone https://github.com/marioswc/hermanos-mendoza.git
+cd hermanos-mendoza
+npm install
+```
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+### Development
+
+```bash
+npm run dev
+```
+
+The application will be available at [http://localhost:4321](http://localhost:4321).
+
+### Other commands
+
+| Command                   | Description                                                        |
+| ------------------------- | ------------------------------------------------------------------ |
+| `npm run build`           | Generates the optimized version in `dist/`.                        |
+| `npm run preview`         | Serves the generated version locally for review before deployment. |
+| `npm run astro -- --help` | Displays the Astro CLI help.                                       |
+
+## Live demo
+
+Visit the published version at [hermanos-mendoza.vercel.app](https://hermanos-mendoza.vercel.app/).
