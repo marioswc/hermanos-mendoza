@@ -1,1 +1,64 @@
 @import "tailwindcss";
+/* import fonts */
+@import "@fontsource-variable/inter";
+@import "@fontsource-variable/plus-jakarta-sans";
+
+@theme {
+    --font-sans: 'Inter Variable', sans-serif;
+    --font-jakarta: 'Plus Jakarta Sans Variable', sans-serif;
+}
+
+:root {
+    /* colors */
+    --primary: #1e202c;
+    --secondary: #A26333;
+    /* text */
+    --text-primary: #1a202c;
+    --text-secondary: #4f586c;
+    --text-muted: #4f586c;
+    /* accent */
+    --accent: #294164;
+    /* backgrounds */
+    --bg-primary: #ffff;
+    --bg-secondary: #FBFBFA;
+    /* lines */
+    --line: rgba(17, 31, 52, .16);
+}
+
+html {
+    scroll-behavior: smooth;
+    scrollbar-gutter: stable;
+}
+
+body {
+    font-size: 16px;
+    line-height: 1.6;
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+}
+
+h1, h2, h3, h4 {
+    font-family: var(--font-jakarta);
+}
+
+
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--line);
+    border-radius: 9999px;
+    border: 2px solid var(--bg-secondary);
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--secondary);
+}
