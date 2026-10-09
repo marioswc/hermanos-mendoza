@@ -1,0 +1,185 @@
+---
+import ButtonPrimary from "./ui/ButtonPrimary.astro";
+import ButtonSecondary from "./ui/ButtonSecondary.astro";
+---
+
+<main>
+  <section class="p-2 min-w-0 max-w-300 mx-auto flex justify-center min-h-dvh">
+    <div
+      class="flex flex-col items-center justify-center gap-2 md:gap-4 text-center"
+    >
+      <h1
+        class="font-jakarta font-bold md:text-8xl text-5xl text-(--text-primary)"
+      >
+        Carpintería y Pintura<br />
+        <span class="text-(--text-secondary)">Hermanos Mendoza</span>
+      </h1>
+      <p class="text-md md:text-lg text-(--text-primary) p-2 md:w-1/2">
+        <strong>Diseñamos, fabricamos, pintamos e instalamos</strong> cocinas, puertas,
+        closets y muebles hechos exactamente para tu espacio.
+        <strong> Muebles y espacios a tu medida.</strong>
+      </p>
+      <div class="flex items-center justify-between gap-6">
+        <ButtonPrimary
+          href="https://wa.me/520000000000?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto."
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 640 640"
+            width="24"
+            height="24"
+          >
+            <path
+              d="M476.9 161.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L96 544l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"
+              fill="currentColor"></path></svg
+          >
+          Cotizar Proyecto</ButtonPrimary
+        >
+        <a
+          href="#proyectos"
+          class="inline-block text-md font-semibold text-(--text-primary) px-3 py-2 bg-(--white) border border-(--primary) rounded-full hover:border-(--secondary) hover:text-(--secondary) hover:-translate-y-0.5 transition-all duration-300 ease-in-out"
+        >
+          <span class="flex items-center gap-2">Ver Proyectos </span>
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <section id="nosotros" class="bg-(--bg-secondary) py-4">
+    <div class="min-w-0 max-w-300 mx-auto">
+      <p
+        class="font-bold font-jakarta text-(--text-primary) md:text-6xl text-3xl p-2"
+      >
+        No solo vendemos muebles de catálogo. Medimos tu espacio, diseñamos
+        contigo y fabricamos cada pieza en nuestro taller. <br /> Después la pintamos,
+        la instalamos y te la dejamos lista para usar.
+      </p>
+    </div>
+    <div
+      class="p-2 min-w-0 max-w-300 mx-auto grid grid-cols-1 md:grid-cols-2 gap-6"
+    >
+      <!-- card information -->
+    </div>
+  </section>
+
+  <section id="proyectos" class="p-2 min-w-0 max-w-300 mx-auto py-10">
+    <h2
+      class="font-bold font-jakarta text-(--text-primary) md:text-5xl text-4xl"
+    >
+      Trabajos que hablan por nosotros
+    </h2>
+    <div class="my-5">
+      <!-- project cards -->
+    </div>
+    <div
+      class="flex flex-col md:flex-row gap-4 md:gap-0 items-end md:items-center md:justify-between border-t border-(--line) py-5"
+    >
+      <h3 class="text-2xl font-semibold font-jakarta">¿Ya imaginas el tuyo?</h3>
+      <ButtonPrimary
+        href="https://wa.me/520000000000?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto."
+      >
+        Pedir Cotización</ButtonPrimary
+      >
+    </div>
+  </section>
+
+  <section id="contacto" class="bg-(--bg-secondary) py-20">
+    <div
+      class="p-2 min-w-0 max-w-300 mx-auto flex flex-col lg:flex-row items-start md:justify-between gap-4 md:gap-2"
+    >
+      <div class="w-full lg:max-w-lg mx-auto">
+        <h2
+          class="font-bold text-5xl md:text-7xl text-(--text-primary) font-jakarta"
+        >
+          Hablemos de tu proyecto
+        </h2>
+        <p class="text-(--text-secondary) text-md my-4">
+          Dinos qué proyecyo deseas hacer y para cuándo lo necesitas. Te
+          respondemos para agendar la visita y, después, recibes tu propuesta.
+        </p>
+        <div class="flex flex-col items-start gap-4 my-4">
+          <div class="flex items-center justify-start gap-4">
+            <ButtonPrimary
+              href="https://wa.me/520000000000?text=Hola%2C%20me%20gustar%C3%ADa%20pedir%20una%20cotizaci%C3%B3n%20para%20mi%20proyecto."
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 640 640"
+                width="24"
+                height="24"
+              >
+                <path
+                  d="M476.9 161.1c-41.9-42-97.7-65.1-157-65.1-122.4 0-222 99.6-222 222 0 39.1 10.2 77.3 29.6 111L96 544l117.7-30.9c32.4 17.7 68.9 27 106.1 27h.1c122.3 0 224.1-99.6 224.1-222 0-59.3-25.2-115-67.1-157m-157 341.6c-33.2 0-65.7-8.9-94-25.7l-6.7-4-69.8 18.3 18.6-68.1-4.4-7c-18.5-29.4-28.2-63.3-28.2-98.2 0-101.7 82.8-184.5 184.6-184.5 49.3 0 95.6 19.2 130.4 54.1s56.2 81.2 56.1 130.5c0 101.8-84.9 184.6-186.6 184.6m101.2-138.2c-5.5-2.8-32.8-16.2-37.9-18-5.1-1.9-8.8-2.8-12.5 2.8s-14.3 18-17.6 21.8c-3.2 3.7-6.5 4.2-12 1.4-32.6-16.3-54-29.1-75.5-66-5.7-9.8 5.7-9.1 16.3-30.3 1.8-3.7.9-6.9-.5-9.7s-12.5-30.1-17.1-41.2c-4.5-10.8-9.1-9.3-12.5-9.5-3.2-.2-6.9-.2-10.6-.2s-9.7 1.4-14.8 6.9c-5.1 5.6-19.4 19-19.4 46.3s19.9 53.7 22.6 57.4c2.8 3.7 39.1 59.7 94.8 83.8 35.2 15.2 49 16.5 66.6 13.9 10.7-1.6 32.8-13.4 37.4-26.4s4.6-24.1 3.2-26.4c-1.3-2.5-5-3.9-10.5-6.6"
+                  fill="currentColor"></path></svg
+              >
+              Enviar Mensaje</ButtonPrimary
+            >
+            <ButtonSecondary href="tel:+520000000000">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="20"
+                height="20"
+                fill="none"
+                viewBox="0 0 18 18"
+                ><path
+                  fill="currentColor"
+                  d="M14.625 16.313h-.096C3.476 15.677 1.907 6.35 1.687 3.504A1.687 1.687 0 0 1 3.24 1.688h3.1a1.125 1.125 0 0 1 1.046.708L8.24 4.5a1.13 1.13 0 0 1-.248 1.215l-1.198 1.21a5.27 5.27 0 0 0 4.264 4.274l1.22-1.209a1.13 1.13 0 0 1 1.221-.23l2.12.849a1.12 1.12 0 0 1 .693 1.046v2.97a1.687 1.687 0 0 1-1.688 1.688m-11.25-13.5a.56.56 0 0 0-.563.562v.045c.26 3.33 1.919 11.205 11.78 11.768a.56.56 0 0 0 .595-.53v-3.003l-2.12-.85-1.614 1.604-.27-.034c-4.894-.613-5.558-5.507-5.558-5.557l-.034-.27 1.6-1.615-.844-2.12z"
+                ></path></svg
+              >
+              Llamar</ButtonSecondary
+            >
+          </div>
+          <div class="flex flex-col gap-1">
+            <p class="text-sm text-(--text-secondary)">Teléfono</p>
+            <a
+              href="tel:+520000000000"
+              class="flex text-2xl md:text-3xl font-bold font-jakarta text-(--text-primary) hover:text-(--secondary) hover:underline hover:underline-offset-4 transition-all duration-300 ease-in-out"
+            >
+              +52 000 000 0000
+            </a>
+          </div>
+          <div class="flex flex-col gap-1">
+            <p class="text-sm text-(--text-secondary)">Correo</p>
+            <a
+              href="mailto:mario.ms@gmail.com"
+              class="text-2xl md:text-3xl font-bold font-jakarta text-(--text-primary) hover:text-(--secondary) hover:underline hover:underline-offset-4 transition-all duration-300 ease-in-out"
+            >
+              correo@dominio.com
+            </a>
+          </div>
+          <div class="flex flex-col gap-1">
+            <h4 class="text-lg font-bold font-jakarta">Síguenos</h4>
+            <ButtonSecondary
+              href="https://www.facebook.com/carpinteriahmendoza"
+            >
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                fill="none"
+                viewBox="0 0 24 24"
+                ><path
+                  fill="currentColor"
+                  fill-rule="evenodd"
+                  d="M10.488 3.788A5.25 5.25 0 0 1 14.2 2.25h2.7a.75.75 0 0 1 .75.75v3.6a.75.75 0 0 1-.75.75h-2.7a.15.15 0 0 0-.15.15v1.95h2.85a.75.75 0 0 1 .728.932l-.9 3.6a.75.75 0 0 1-.728.568h-1.95V21a.75.75 0 0 1-.75.75H9.7a.75.75 0 0 1-.75-.75v-6.45H7a.75.75 0 0 1-.75-.75v-3.6A.75.75 0 0 1 7 9.45h1.95V7.5a5.25 5.25 0 0 1 1.538-3.712M14.2 3.75a3.75 3.75 0 0 0-3.75 3.75v2.7a.75.75 0 0 1-.75.75H7.75v2.1H9.7a.75.75 0 0 1 .75.75v6.45h2.1V13.8a.75.75 0 0 1 .75-.75h2.114l.525-2.1H13.3a.75.75 0 0 1-.75-.75V7.5a1.65 1.65 0 0 1 1.65-1.65h1.95v-2.1z"
+                  clip-rule="evenodd"></path></svg
+              >
+              hermanosmendoza</ButtonSecondary
+            >
+          </div>
+        </div>
+      </div>
+
+      <div class="w-full flex items-end flex-col gap-4">
+        <h3
+          class="font-bold text-3xl md:text-4xl text-(--text-primary) font-jakarta"
+        >
+          Preguntas frecuentes
+        </h3>
+        <div class="my-4 w-full">
+          <!-- faq container -->
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
