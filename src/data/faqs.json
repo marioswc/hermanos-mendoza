@@ -1,0 +1,32 @@
+[
+  {
+    "id": 1,
+    "question": "¿La cotización tiene costo?",
+    "answer": "No, todas nuestras cotizaciones iniciales son completamente gratuitas y sin compromiso."
+  },
+  {
+    "id": 2,
+    "question": "¿Cuánto tarda un proyecto?",
+    "answer": "Depende de la complejidad, pero una landing page suele estar lista entre 5 y 7 días hábiles."
+  },
+  {
+    "id": 3,
+    "question": "¿Incluyen instalación y pintura?",
+    "answer": "Sí. Fabricamos, pintamos o barnizamos e instalamos la pieza, y revisamos todo contigo al entregar."
+  },
+  {
+    "id": 4,
+    "question": "¿Con qué materiales trabajan?",
+    "answer": "Trabajamos madera sólida y tableros, según lo que pida el proyecto y tu presupuesto. Te recomendamos la mejor opción para cada caso."
+  },
+  {
+    "id": 5,
+    "question": "¿Puedo ver trabajos terminados?",
+    "answer": "Claro. Revisa la sección de trabajos recientes o pídenos más ejemplos por WhatsApp."
+  },
+  {
+    "id": 6,
+    "question": "¿Cómo se acuerda el precio y el pago?",
+    "answer": "Todo queda en la propuesta: alcance, materiales, fechas, costo y forma de pago. Nada cambia sin tu aprobación."
+  }
+]

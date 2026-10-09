@@ -1,0 +1,22 @@
+[
+    {
+        "id": 1,
+        "title": "Diseño y calidad",
+        "description": "Cada proyecto es único, por eso nos aseguramos de que cada pieza se adapte perfectamente a tu espacio y estilo."
+    },
+    {
+        "id": 2,
+        "title": "Acabados hechos para durar",
+        "description": "Utilizamos materiales duraderos y de alta calidad para garantizar que tus muebles se mantengan en excelente estado durante años."
+    },
+    {
+        "id": 3,
+        "title": "Un solo equipo, cero complicaciones",
+        "description": "Carpintería y pintura con las mismas manos. No coordinas contratistas ni esperas a que uno termine para que llegue el otro."
+    },
+    {
+        "id": 4,
+        "title": "Sabes cuánto cuesta antes de empezarr",
+        "description": "Alcance, materiales, fechas y costo por escrito. Nada cambia sin tu aprobación, así que no hay sorpresas al final."
+    }
+]
