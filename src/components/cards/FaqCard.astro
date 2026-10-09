@@ -1,0 +1,54 @@
+---
+import faqCards from "../../data/faqs.json";
+---
+
+<div class="my-4 w-full p-4">
+  {
+    faqCards.map((faq) => (
+      <details class="border-b border-(--line) py-5 group">
+        <summary class="flex justify-between items-center cursor-pointer list-none">
+          <p class="font-semibold text-md md:text-lg text-(--text-primary)">
+            {faq.question}
+          </p>
+          <svg
+            fill="none"
+            stroke="currentColor"
+            class="w-5 h-5 text-(--secondary) transition-transform duration-300 group-open:rotate-180"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="m19 9-7 7-7-7"
+            />
+          </svg>
+        </summary>
+        <div class="overflow-hidden">
+          <p class="text-sm md:text-lg text-(--text) py-4 px-2 group-open:animate-fadeIn">
+            {faq.answer}
+          </p>
+        </div>
+      </details>
+    ))
+  }
+</div>
+
+<script>
+  // get all details elements
+  const allDetails = document.querySelectorAll("details");
+  allDetails.forEach((details) => {
+    // listener for toggle event on each details element
+    details.addEventListener("toggle", (event) => {
+      // if the details element is open, close all other details elements
+      if (details.open) {
+        allDetails.forEach((otherDetails) => {
+          // close other details elements if they are not the one that was just opened
+          if (otherDetails !== details) {
+            otherDetails.open = false;
+          }
+        });
+      }
+    });
+  });
+</script>
