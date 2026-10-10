@@ -1,17 +1,17 @@
 ---
-import '../styles/global.css';
+import "../styles/global.css";
+import Seo from "../components/Seo.astro";
 ---
+
 <!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<link rel="icon" href="/favicon.ico" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Hermanos Mendoza | Portfolio</title>
-	</head>
-	<body>
-		<slot />
-	</body>
+<html lang="es">
+  <head>
+    <Seo
+      title="Carpintería y Pintura Hermanos Mendoza | Muebles a Medida"
+      description="Carpintería y pintura Hermanos Mendoza. Diseñamos, fabricamos, pintamos e instalamos muebles a medida, cocinas y closets en Mérida, Yucatán. Cotización sin compromiso."
+    />
+  </head>
+  <body>
+    <slot />
+  </body>
 </html>

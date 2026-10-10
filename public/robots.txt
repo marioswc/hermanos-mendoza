@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://hermanos-mendoza.vercel.app/sitemap-index.xml

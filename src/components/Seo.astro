@@ -1,0 +1,78 @@
+---
+interface Props {
+  title: string;
+  description: string;
+  image?: string;
+  canonicalURL?: string;
+}
+
+const {
+  title,
+  description,
+  image = "/og-image.png",
+  canonicalURL = Astro.url.href,
+} = Astro.props;
+
+const businessSchema = {
+  "@context": "https://schema.org",
+  "@type": "Carpenter",
+  "@id": `${Astro.site}#business`,
+  name: "Carpintería y Pintura Hermanos Mendoza",
+  description,
+  url: Astro.site,
+  image: new URL(image, Astro.site).href,
+  areaServed: [
+    {
+      "@type": "City",
+      name: "Mérida",
+      containedInPlace: {
+        "@type": "AdministrativeArea",
+        name: "Yucatán",
+      },
+    },
+    {
+      "@type": "AdministrativeArea",
+      name: "Yucatán",
+    },
+  ],
+  serviceType: [
+    "Muebles a medida",
+    "Cocinas a medida",
+    "Closets a medida",
+    "Carpintería",
+    "Pintura e instalación de muebles",
+  ],
+  sameAs: ["https://www.facebook.com/carpinteriahmendoza"],
+};
+---
+
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+<title>{title}</title>
+<meta name="description" content={description} />
+<link rel="canonical" href={canonicalURL} />
+<meta property="og:site_name" content="Hermanos Mendoza" />
+<meta property="og:locale" content="es_MX" />
+
+<meta property="og:type" content="website" />
+<meta property="og:url" content={canonicalURL} />
+<meta property="og:title" content={title} />
+<meta property="og:description" content={description} />
+<meta property="og:image" content={new URL(image, Astro.site)} />
+<meta
+  property="og:image:alt"
+  content="Carpintería y Pintura Hermanos Mendoza"
+/>
+
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:url" content={canonicalURL} />
+<meta name="twitter:title" content={title} />
+<meta name="twitter:description" content={description} />
+<meta name="twitter:image" content={new URL(image, Astro.site)} />
+<meta
+  name="twitter:image:alt"
+  content="Carpintería y Pintura Hermanos Mendoza"
+/>
+
+<script type="application/ld+json" set:html={JSON.stringify(businessSchema)} />
