@@ -6,7 +6,9 @@ import InfoCard from "./cards/InfoCard.astro";
 ---
 
 <main>
-  <section class="p-2 min-w-0 max-w-300 mx-auto flex justify-center min-h-screen">
+  <section
+    class="p-2 min-w-0 max-w-300 mx-auto flex justify-center min-h-screen"
+  >
     <div
       class="flex flex-col items-center justify-center gap-2 md:gap-4 text-center"
     >
@@ -16,10 +18,10 @@ import InfoCard from "./cards/InfoCard.astro";
         Carpintería y Pintura<br />
         <span class="text-(--text-secondary)">Hermanos Mendoza</span>
       </h1>
-      <p class="text-md md:text-lg text-(--text-primary) p-2 md:w-1/2">
+      <p class="text-md md:text-lg text-(--text-secondary) p-2 md:w-1/2">
         <strong>Diseñamos, fabricamos, pintamos e instalamos</strong> cocinas, puertas,
-        closets y muebles hechos exactamente para tu espacio.
-        <strong> Muebles y espacios a tu medida.</strong>
+        closets y muebles hechos a tu medida. Creamos espacios únicos para tu hogar
+        o negocio <strong>en todo el estado de Yucatán</strong>.
       </p>
       <div class="flex items-center justify-between gap-6">
         <ButtonPrimary
@@ -52,13 +54,13 @@ import InfoCard from "./cards/InfoCard.astro";
     class="bg-(--bg-secondary) flex flex-col items-center py-14 md:justify-center"
   >
     <div class="w-full min-w-0 max-w-300 mx-auto md:my-10">
-      <p
+      <h2
         class="font-bold font-jakarta text-(--text-primary) md:text-6xl text-3xl p-2"
       >
         No solo vendemos muebles de catálogo. Medimos tu espacio, diseñamos
         contigo y fabricamos cada pieza en nuestro taller. <br /> Después la pintamos,
         la instalamos y te la dejamos lista para usar.
-      </p>
+      </h2>
       <!-- info cards -->
       <InfoCard />
     </div>
@@ -96,7 +98,7 @@ import InfoCard from "./cards/InfoCard.astro";
           Hablemos de tu proyecto
         </h2>
         <p class="text-(--text-secondary) text-md my-4">
-          Dinos qué proyecyo deseas hacer y para cuándo lo necesitas. Te
+          Dinos qué proyecto deseas hacer y para cuándo lo necesitas. Te
           respondemos para agendar la visita y, después, recibes tu propuesta.
         </p>
         <div class="flex flex-col items-start gap-4 my-4">
