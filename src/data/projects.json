@@ -1,3 +1,98 @@
 [
-    
+  {
+    "id": 1,
+    "name": "Cocina integral en cedro",
+    "description": "Cedro y cubierta de cuarzo",
+    "img": "assets/trabajos/cocina-cedro.jpg",
+    "span": "lg:col-span-4",
+    "type": "cocina"
+  },
+  {
+    "id": 2,
+    "name": "Puerta principal de dos hojas",
+    "description": "Madera sólida, acabado mate",
+    "img": "assets/trabajos/puerta-dos-hojas.jpg",
+    "span": "lg:col-span-2",
+    "type": "puertas"
+  },
+  {
+    "id": 3,
+    "name": "Closet de piso a techo",
+    "description": "Melamina y frentes en madera",
+    "img": "assets/trabajos/closet-piso-techo.jpg",
+    "span": "lg:col-span-2",
+    "type": "closets"
+  },
+  {
+    "id": 4,
+    "name": "Mesa de comedor para ocho",
+    "description": "Caoba, barniz satinado",
+    "img": "assets/trabajos/mesa-comedor.jpg",
+    "span": "lg:col-span-2",
+    "type": "muebles"
+  },
+  {
+    "id": 5,
+    "name": "Fachada y herrería",
+    "description": "Pintura exterior, dos manos",
+    "img": "assets/trabajos/fachada-herreria.jpg",
+    "span": "lg:col-span-2",
+    "type": "pintura"
+  },
+  {
+    "id": 6,
+    "name": "Isla con desayunador",
+    "description": "Encino y herrajes de cierre suave",
+    "img": "assets/trabajos/isla-desayunador.jpg",
+    "span": "lg:col-span-3",
+    "type": "cocina"
+  },
+  {
+    "id": 7,
+    "name": "Puertas interiores de tablero",
+    "description": "Pino, laca blanca",
+    "img": "assets/trabajos/puertas-interiores.jpg",
+    "span": "lg:col-span-3",
+    "type": "puertas"
+  },
+  {
+    "id": 8,
+    "name": "Librero a la medida",
+    "description": "Cedro, entrepaños ajustables",
+    "img": "assets/trabajos/librero-medida.jpg",
+    "span": "lg:col-span-3",
+    "type": "muebles"
+  },
+  {
+    "id": 9,
+    "name": "Vestidor principal",
+    "description": "Cajoneras e iluminación integrada",
+    "img": "assets/trabajos/vestidor-principal.jpg",
+    "span": "lg:col-span-3",
+    "type": "closets"
+  },
+  {
+    "id": 10,
+    "name": "Restauración de comedor",
+    "description": "Lijado, tinte y laca",
+    "img": "assets/trabajos/restauracion-comedor.jpg",
+    "span": "lg:col-span-2",
+    "type": "pintura"
+  },
+  {
+    "id": 11,
+    "name": "Escritorio de oficina",
+    "description": "Encino, cubierta continua",
+    "img": "assets/trabajos/escritorio-oficina.jpg",
+    "span": "lg:col-span-2",
+    "type": "muebles"
+  },
+  {
+    "id": 12,
+    "name": "Cocina en L, acabado azul",
+    "description": "Laca satinada, cubierta clara",
+    "img": "assets/trabajos/cocina-azul.jpg",
+    "span": "lg:col-span-2",
+    "type": "cocina"
+  }
 ]

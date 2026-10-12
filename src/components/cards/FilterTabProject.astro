@@ -1,0 +1,128 @@
+---
+import projects from "../../data/projects.json";
+// set of unique categories from the projects data json file
+const categories = [...new Set(projects.map((project) => project.type))];
+---
+
+<div class="my-5 contain-inline-size">
+  <div
+    class="relative inline-flex max-w-full overflow-x-auto overscroll-x-contain rounded-full bg-gray-100 p-1 scrollbar-none [&::-webkit-scrollbar]:hidden"
+    aria-label="Filtrar proyectos por categoría"
+    id="filter-container"
+    role="group"
+  >
+    <span
+      id="pill"
+      class="pointer-events-none absolute top-1 left-0 z-0 h-full rounded-full bg-white shadow-sm transition-all duration-300 ease-out motion-reduce:transition-none"
+    ></span>
+    <button
+      type="button"
+      aria-pressed="true"
+      id="defaultTab"
+      class="px-4 py-2 z-1 flex-none whitespace-nowrap text-sm cursor-pointer rounded-full transition-colors duration-300 ease-in-out"
+      >Todos</button
+    >
+    {
+      categories.map((category) => (
+        <button
+          type="button"
+          id={`filter-${category}`}
+          aria-pressed="false"
+          class="px-4 py-2 z-1 capitalize flex-none whitespace-nowrap text-sm cursor-pointer rounded-full transition-colors duration-300 ease-in-out"
+        >
+          {category}
+        </button>
+      ))
+    }
+  </div>
+</div>
+<div
+  class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-6 auto-rows-100 grid-flow-dense gap-4 md:gap-5 mt-10"
+>
+  {
+    projects.map((item) => (
+      <figure
+        class={`flex flex-col rounded-[clamp(22px,2.6vw,30px)] overflow-hidden cursor-pointer ${item.span} group hover:shadow-xl hover:-translate-y-5 transition-all duration-300 ease-in-out`}
+        data-cat={item.type}
+      >
+        <figcaption class="p-6 rounded-t-xl bg-gray-50">
+          <h3 class="text-xl font-bold tracking-tight">{item.name}</h3>
+          <p class="text-(--text-secondary) mt-1 text-sm">{item.description}</p>
+        </figcaption>
+        <div class="relative flex-1 bg-gray-200">
+          <img
+            src={item.img}
+            alt={item.name}
+            class="absolute inset-0 w-full h-full object-cover group-hover:hover:scale-110 transition-transform duration-300 ease-in-ot"
+            loading="lazy"
+            width="100%"
+            height="100%"
+          />
+        </div>
+      </figure>
+    ))
+  }
+</div>
+
+<script>
+  // get the buttons and the pill element
+  const filterContainer = document.getElementById("filter-container");
+  const defaultBtn = document.getElementById("defaultTab");
+  const buttons = filterContainer?.querySelectorAll("button");
+  const pill = document.getElementById("pill");
+
+  // set the default position for the pill element
+  if (defaultBtn instanceof HTMLButtonElement) {
+    movePillToButton(defaultBtn);
+  }
+
+  buttons?.forEach((button) => {
+    button.addEventListener("click", () => {
+      // get the bounding rect of the filter container and the clicked button
+      movePillToButton(button);
+      // set the aria-pressed attribute for the clicked button and reset the others
+      buttons?.forEach((btn) => {
+        const btnActive = btn === button; // check if the clicked button is the same as the current button in the loop
+        const category = btnActive
+          ? btn.textContent?.trim().toLowerCase()
+          : "todos"; // set the category based on the clicked button's text content or default to "todos"
+        btn.setAttribute("aria-pressed", String(btnActive));
+        // filter the projects based on the clicked button's category and toggle the hover class
+        if (btnActive) {
+          filterProjects(category);
+          btn.classList.remove("hover:bg-gray-200");
+        } else {
+          btn.classList.add("hover:bg-gray-200");
+        }
+      });
+    });
+  });
+
+  function movePillToButton(buttonSelected: HTMLButtonElement) {
+    if (!pill || !filterContainer) return;
+
+    const containerRect = filterContainer.getBoundingClientRect();
+    const buttonRect = buttonSelected.getBoundingClientRect();
+
+    const calculatedX =
+      buttonRect.left -
+      containerRect.left -
+      filterContainer.clientLeft +
+      filterContainer.scrollLeft;
+
+    pill.style.width = `${buttonRect.width}px`;
+    pill.style.height = `${buttonRect.height}px`;
+    pill.style.transform = `translateX(${calculatedX}px)`;
+  }
+
+  function filterProjects(category: string) {
+    const projects = document.querySelectorAll<HTMLElement>("[data-cat]");
+    projects.forEach((card) => {
+      const cardCategory = card.getAttribute("data-cat");
+
+      const shouldShow = category === "todos" || cardCategory === category;
+
+      (card as HTMLElement).hidden = !shouldShow;
+    });
+  }
+</script>
